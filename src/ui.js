@@ -50,10 +50,15 @@ class UI {
 
     //Insert alert div
     container.insertBefore(div, posts);
+  
+    //Timeout
+    setTimeout(() => { 
+      this.clearAlert();
+    }, 3000); 
   }
 
   clearAlert() {
-
+    
   }
 
   clearFields() {
