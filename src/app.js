@@ -71,8 +71,7 @@ function enableEdit(e) {
       title,
       body
     }
-    console.log(data)
+    ui.fillForm(data);
   }
-  
   e.preventDefault();
 }
