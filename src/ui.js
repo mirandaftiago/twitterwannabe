@@ -83,6 +83,11 @@ class UI {
     this.changeFormState('edit');
   }
 
+  //Clear ID hidden value
+  clearIdInput() {
+    this.idInput.value = '';
+  }
+
   //Change the form state
   changeFormState(type) {
     if(type === 'edit') {
@@ -104,7 +109,20 @@ class UI {
       cardForm.insertBefore(button, formEnd);
 
     } else {
+      this.postSubmit.textContent = 'Post It';
+      this.postSubmit.className = 'post-submit btn btn-primary btn-block';
 
+      //Remove cancel button if present
+      const btnPresent = document.querySelector('.post-cancel');
+      if(btnPresent) {
+        btnPresent.remove();
+      }
+
+      //Clear the ID from hidden field
+      this.clearIdInput();
+
+      //Clear text
+      this.clearFields();
     }
   }
 
