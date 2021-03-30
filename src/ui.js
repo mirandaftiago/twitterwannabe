@@ -79,6 +79,18 @@ class UI {
     this.titleInput.value = data.title;
     this.bodyInput.value = data.body;
     this.idInput.value = data.id;
+
+    this.changeFormState('edit');
+  }
+
+  //Change the form state
+  changeFormState(type) {
+    if(type === 'edit') {
+      this.postSubmit.textContent = 'Update Post';
+      this.postSubmit.className = 'post-submit btn btn-warning btn-block';
+    } else {
+
+    }
   }
 
 }
